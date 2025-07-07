@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Coin Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lucky Coin Game</h1>
+
+        <!-- Add this inside the <body> tag, preferably near the top -->
+<a href="admin-login.html" class="admin-icon" title="Admin Panel">🔐</a>
+
+        <!-- Bid Selection Screen -->
+        <div id="bidSelection">
+            <h2>Select Your Bid</h2>
+            <button class="bidBtn" data-bid="50">50 Points</button>
+            <button class="bidBtn" data-bid="100">100 Points</button>
+            <button class="bidBtn" data-bid="150">150 Points</button>
+            <button class="bidBtn" data-bid="200">200 Points</button>
+        </div>
+
+        <!-- TID Entry Screen -->
+        <div id="tidEntry" class="hidden">
+            <h3>Enter Your TID</h3>
+            <input type="text" id="tidInput" placeholder="Enter TID">
+            <button id="startGameBtn">Start Game</button>
+            <button id="backToBid">Back</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="gameScreen" class="hidden">
+            <h3>Current Purse: <span id="purseAmount"></span> Points</h3>
+            <div class="coin-container">
+                <div id="coin" class="coin">
+                    <div class="front"></div>
+                    <div class="back"></div>
+                </div>
+            </div>
+            <button id="flipBtn">Flip Coin</button>
+            <button id="finishGameBtn">Finish Game</button>
+            <p id="gameMessage"></p>
+        </div>
+
+        <!-- Result Modal -->
+        <div id="resultModal" class="modal hidden">
+            <div class="modal-content">
+                <h3>Game Summary</h3>
+                <p id="resultStart"></p>
+                <p id="resultFinal"></p>
+                <p id="resultGain"></p>
+                <button id="closeResult">OK</button>
+            </div>
+        </div>
+
+        <!-- TID Check Modal -->
+        <div id="tidCheckModal" class="modal hidden">
+            <div class="modal-content">
+                <h3>TID Status</h3>
+                <p id="tidStatusMessage"></p>
+                <button id="closeTidCheck">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
